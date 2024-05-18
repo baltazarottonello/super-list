@@ -1,0 +1,13 @@
+---
+import { db, Products } from "astro:db";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import List from "../components/List";
+import SaveButton from '../components/SaveButton.astro'
+
+const products = await db.select().from(Products);
+---
+
+<BaseLayout>
+  <List products={products} client:only="react" />
+  <SaveButton>
+</BaseLayout>

@@ -1,0 +1,21 @@
+<form class="save-button">
+  <button type="submit">Guardar</button>
+</form>
+
+<script>
+  const button = document.querySelector(".save-button") as HTMLButtonElement;
+
+  button.onclick = async (e) => {
+    e.preventDefault();
+    const updatedProduct = JSON.parse(localStorage.getItem("updatedProduct"));
+    await fetch(`/api/${updatedProduct.name}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedProduct),
+    }).then((res) => {
+      console.log(res.ok, res.status);
+    });
+  };
+</script>
