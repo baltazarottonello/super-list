@@ -1,0 +1,28 @@
+.inStock {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.toBuy {
+    flex-direction: row;
+    margin-left: 10px;
+    flex-wrap: wrap;
+}
+
+.separatorInStock {
+    background-color: rgb(156, 255, 131);
+    padding: 15px;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+.separatorToBuy {
+    background-color: rgb(255, 114, 114);
+    padding: 15px;
+    border-radius: 25px;
+    margin: 10px;
+}
+
+h2 {
+    margin: 0px;
+}

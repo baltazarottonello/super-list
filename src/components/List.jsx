@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Product from "./Product";
+import '../styles/List/styles.css'
 
 export default function List(props) {
     const [change, setChange] = useState(false);
@@ -33,15 +34,15 @@ export default function List(props) {
     }
 
     return (
-        <div className="RootLayout">
+        <div className="ListLayout">
+            <div className="separatorInStock"><h2>Productos en Stock</h2></div>
             <div className="inStock">
                 {products.filter(product => product.stock === 'true').map(product => (
                     <Product key={product.name} product={product} isDisabled={buttons} onClick={handleProductClick} />
                 ))}
             </div>
-            <div className="separador"></div>
+            <div className="separatorToBuy"><h2>Productos para comprar:</h2></div>
             <div className="toBuy">
-                <h2>Productos para comprar:</h2>
                 {products.filter(product => product.stock === 'false').map(product => (
                     <Product key={product.name} product={product} isDisabled={buttons} onClick={handleProductClick} />
                 ))}

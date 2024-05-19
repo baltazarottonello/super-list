@@ -24,3 +24,4 @@ pnpm-debug.log*
 .idea/
 
 db/seed.ts
+netlify.toml

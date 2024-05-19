@@ -1,0 +1,11 @@
+.ProductLayout {
+    padding: 0px;
+    margin: 2px;
+}
+
+.product {
+    background-color: rgb(255, 255, 255);
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 50px;
+}
